@@ -1,102 +1,149 @@
-# Sprint9-Proyect-Landing_Experiment
+# Experimento A/B para Optimización de Landing Page
 
-Descripción
+## Descripción del Proyecto
 
-En este proyecto analicé un experimento A/B realizado sobre la página de inicio de un sitio de comercio electrónico. El objetivo fue evaluar si una nueva versión de la landing page generaba mejoras en la tasa de conversión y en el valor económico generado por los usuarios.
-A través de análisis exploratorio, pruebas estadísticas e interpretación de resultados, se buscó proporcionar una recomendación basada en datos para apoyar la toma de decisiones del equipo de marketing.
+Una empresa de ecommerce realizó un experimento A/B para evaluar el impacto de una nueva versión de su landing page sobre dos métricas clave del negocio:
 
-Objetivo del Proyecto
+* Tasa de conversión.
+* Gasto promedio por usuario convertido.
 
-Determinar si existen diferencias estadísticamente significativas entre las versiones A y B de la landing page respecto a:
-Tasa de conversión.
-Gasto promedio por usuario convertido.
-Comportamiento según fuente de tráfico.
-Comportamiento según tipo de usuario.
-El objetivo final fue recomendar qué versión debería implementarse en producción.
+El objetivo fue determinar si la nueva versión generaba mejores resultados y proporcionar una recomendación basada en evidencia estadística para apoyar la toma de decisiones del equipo de marketing.
 
-Dataset
+---
 
-Fuente: Dataset académico proporcionado por TripleTen.
-Cada registro representa un usuario expuesto a una única versión de la página.
-Variables principales
-Versión de landing page (A o B)
-Región geográfica
-Dispositivo utilizado
-Fuente de tráfico
-Tipo de usuario (Nuevo o Recurrente)
-Conversión (0 = No convirtió, 1 = Convirtió)
-Gasto generado por el usuario
+## Objetivo de Negocio
 
-Herramientas Utilizadas
+Determinar qué versión de la landing page debe implementarse en producción considerando:
 
-Python
-Pandas
-NumPy
-SciPy
-Matplotlib
-Seaborn
-Jupyter Notebook
+* Tasa de conversión.
+* Gasto promedio por usuario convertido.
+* Comportamiento por fuente de tráfico.
+* Comportamiento por tipo de usuario.
 
-Metodología
+---
 
-1. Validación y exploración de datos
-Revisión de tipos de datos
-Verificación de valores faltantes
-Validación del balance entre grupos A y B
-Exploración inicial de métricas clave
-2. Comparación de gasto promedio
-Se analizaron únicamente los usuarios que realizaron una conversión para evitar sesgos derivados de registros con gasto igual a cero.
-Se aplicaron pruebas estadísticas para evaluar si existían diferencias significativas entre ambas versiones.
-3. Comparación de tasa de conversión
-Se calcularon las tasas de conversión para cada grupo experimental y se evaluó si las diferencias observadas podían atribuirse al azar o representaban un efecto real.
-4. Segmentación de usuarios
-Se exploró el comportamiento de conversión según:
-Fuente de tráfico
-Tipo de usuario
-Región
-Dispositivo
-5. Visualización de resultados
-Se utilizaron gráficos para respaldar los hallazgos obtenidos mediante el análisis estadístico.
+## Dataset
 
-Técnicas Aplicadas
+**Fuente:** Dataset académico proporcionado por TripleTen.
 
-Análisis Exploratorio de Datos (EDA)
-Estadística descriptiva
-Pruebas de hipótesis
-Comparación de medias
-Prueba Z para proporciones
-Tablas de contingencia
-Segmentación de usuarios
-Visualización de datos
+Cada registro representa un usuario expuesto a una única versión de la landing page dentro de un experimento A/B.
 
-Principales Preguntas de Negocio
+### Variables principales
 
-¿Qué versión genera una mayor tasa de conversión?
-¿Qué versión genera un mayor ingreso por usuario convertido?
-¿La fuente de tráfico influye en la conversión?
-¿Existen diferencias entre usuarios nuevos y recurrentes?
-¿Qué recomendaciones pueden derivarse del experimento?
+* `landing`: versión de la página (A o B).
+* `traffic_source`: fuente de tráfico.
+* `user_type`: tipo de usuario (Nuevo o Recurrente).
+* `converted`: indicador de conversión.
+* `gasto`: monto gastado por el usuario.
 
-Hallazgos
+---
 
-El análisis permitió:
-Evaluar el desempeño relativo de las versiones A y B.
-Identificar segmentos con comportamientos diferenciados.
-Determinar si las diferencias observadas eran estadísticamente significativas.
-Traducir los resultados en recomendaciones prácticas para el negocio.
+## Herramientas Utilizadas
 
-Recomendaciones
+* Python
+* Pandas
+* NumPy
+* SciPy
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
 
-Implementar la versión con mejor desempeño estadísticamente validado.
-Priorizar los canales de adquisición con mayor conversión.
-Diseñar estrategias diferenciadas para usuarios nuevos y recurrentes.
-Continuar realizando pruebas A/B para optimizar la experiencia del usuario.
+---
 
-Aprendizajes
+## Metodología
 
-Este proyecto me permitió fortalecer habilidades en:
-Diseño e interpretación de experimentos A/B.
-Aplicación de pruebas estadísticas en escenarios de negocio.
-Validación de hipótesis mediante evidencia cuantitativa.
-Comunicación de resultados para stakeholders no técnicos.
-Conversión de resultados estadísticos en recomendaciones accionables.
+### 1. Validación y exploración de datos
+
+* Revisión de tipos de datos.
+* Verificación de valores faltantes.
+* Validación del balance entre grupos A y B.
+* Exploración inicial de métricas clave.
+
+### 2. Comparación de gasto promedio
+
+Se analizaron únicamente los usuarios que realizaron una conversión para evitar sesgos provocados por registros con gasto igual a cero.
+
+Se aplicó una prueba t para determinar si existían diferencias significativas entre ambas versiones.
+
+### 3. Comparación de tasa de conversión
+
+Se calcularon las tasas de conversión para cada grupo experimental y se utilizó una prueba Z para evaluar la significancia estadística de las diferencias observadas.
+
+### 4. Segmentación de usuarios
+
+Se analizó la conversión según:
+
+* Fuente de tráfico.
+* Tipo de usuario.
+* Región.
+* Dispositivo.
+
+### 5. Visualización de resultados
+
+Se desarrollaron visualizaciones para respaldar los hallazgos estadísticos y facilitar la interpretación de resultados.
+
+---
+
+## Principales Hallazgos
+
+### Conversión
+
+* La versión B obtuvo 3,194 conversiones.
+* La versión A obtuvo 2,512 conversiones.
+* La prueba Z confirmó que la diferencia observada es estadísticamente significativa.
+
+**Insight:** La versión B genera más conversiones y demuestra un mejor desempeño general para incentivar acciones de compra.
+
+### Gasto Promedio
+
+* Versión A: 61.09
+* Versión B: 68.75
+
+La prueba t mostró una diferencia estadísticamente significativa entre ambas versiones.
+
+**Insight:** Los usuarios convertidos en la versión B generan un mayor valor económico para el negocio.
+
+### Fuente de Tráfico
+
+Se identificó una relación estadísticamente significativa entre la fuente de tráfico y la conversión.
+
+Los canales Organic y Ads concentraron el mayor volumen de conversiones, mientras que Email mostró una proporción de conversión competitiva.
+
+**Insight:** Existen oportunidades para optimizar la inversión en marketing digital enfocándose en los canales con mejor desempeño.
+
+### Tipo de Usuario
+
+No se encontraron diferencias estadísticamente significativas entre usuarios nuevos y recurrentes.
+
+**Insight:** La landing page mantiene un comportamiento consistente independientemente de la experiencia previa del usuario.
+
+---
+
+## Recomendaciones de Negocio
+
+* Implementar la versión B de la landing page.
+* Priorizar la inversión en canales Organic, Ads y Email.
+* Analizar oportunidades de mejora en canales con menor desempeño relativo.
+* Mantener estrategias orientadas tanto a usuarios nuevos como recurrentes.
+
+---
+
+## Habilidades Demostradas
+
+* Análisis Exploratorio de Datos (EDA).
+* Estadística descriptiva.
+* Pruebas de hipótesis.
+* Prueba t para comparación de medias.
+* Prueba Z para comparación de proporciones.
+* Segmentación de usuarios.
+* Visualización de datos.
+* Storytelling con datos.
+* Traducción de resultados estadísticos en recomendaciones de negocio.
+
+---
+
+## Conclusión
+
+La versión B de la landing page mostró un desempeño superior tanto en tasa de conversión como en gasto promedio por usuario convertido.
+
+Los resultados obtenidos proporcionan evidencia estadística suficiente para recomendar su implementación y respaldan decisiones orientadas a maximizar el valor generado por las iniciativas de marketing digital.
