@@ -78,7 +78,7 @@ Se analizó la conversión según:
 * Región.
 * Dispositivo.
 
-<img width="649" height="669" alt="Cantidad de conversiones por tipo de usuario" src="https://github.com/user-attachments/assets/0f09ed7a-79d8-4abb-a591-c1d49c8280d9" /><img width="772" height="796" alt="Proporscion de conversion por tipo de usuario" src="https://github.com/user-attachments/assets/029856fb-bdba-428d-9d6a-340e7d809104" />
+<img width="649" height="669" alt="Cantidad de conversiones por tipo de usuario" src="https://github.com/user-attachments/assets/013555fc-1b55-4f73-b77a-1da84c930346" />
 
 
 ### 5. Visualización de resultados
@@ -119,6 +119,8 @@ Los canales Organic y Ads concentraron el mayor volumen de conversiones, mientra
 ### Tipo de Usuario
 
 No se encontraron diferencias estadísticamente significativas entre usuarios nuevos y recurrentes.
+
+<img width="772" height="796" alt="Proporscion de conversion por tipo de usuario" src="https://github.com/user-attachments/assets/90589d7f-1a71-42c9-b876-cf73842b5971" />
 
 **Insight:** La landing page mantiene un comportamiento consistente independientemente de la experiencia previa del usuario.
 
